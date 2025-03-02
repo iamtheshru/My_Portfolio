@@ -15,6 +15,7 @@ import {
 } from "react-icons/ai";
 
 import { CgFileDocument } from "react-icons/cg";
+import { Helmet } from 'react-helmet';
 
 function NavBar() {
   const [expand, updateExpanded] = useState(false);
@@ -31,118 +32,128 @@ function NavBar() {
   window.addEventListener("scroll", scrollHandler);
 
   return (
-    <Navbar
-      expanded={expand}
-      fixed="top"
-      expand="md"
-      className={navColour ? "sticky" : "navbar"}
-    >
-      <Container>
-        <Navbar.Brand href="/" className="d-flex">
-          <svg
-            width="60"
-            height="60"
-            viewBox="0 0 200 200"
-            xmlns="http://www.w3.org/2000/svg"
+    <>
+      <Helmet>
+        <meta property="og:title" content="Your Page Title" />
+        <meta property="og:description" content="This is a description of your page." />
+        <meta property="og:image" content="https://example.com/your-image.jpg" />
+        <meta property="og:url" content="https://example.com/your-page" />
+        <meta property="og:type" content="website" />
+      </Helmet>
+
+      <Navbar
+        expanded={expand}
+        fixed="top"
+        expand="md"
+        className={navColour ? "sticky" : "navbar"}
+      >
+        <Container>
+          <Navbar.Brand href="/" className="d-flex">
+            <svg
+              width="60"
+              height="60"
+              viewBox="0 0 200 200"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+
+              <text
+                x="50"
+                y="130"
+                fontFamily="Arial"
+                fontSize="100"
+                fill="#CD5FF8"
+                fontWeight="bold"
+              >
+                S
+              </text>
+              <text
+                x="110"
+                y="130"
+                fontFamily="Arial"
+                fontSize="100"
+                fill="#CD5FF8"
+                fontWeight="bold"
+              >
+                P
+              </text>
+            </svg>
+          </Navbar.Brand>
+          <Navbar.Toggle
+            aria-controls="responsive-navbar-nav"
+            onClick={() => {
+              updateExpanded(expand ? false : "expanded");
+            }}
           >
+            <span></span>
+            <span></span>
+            <span></span>
+          </Navbar.Toggle>
+          <Navbar.Collapse id="responsive-navbar-nav">
+            <Nav className="ms-auto" defaultActiveKey="#home">
+              <Nav.Item>
+                <Nav.Link as={Link} to="/" onClick={() => updateExpanded(false)}>
+                  <AiOutlineHome style={{ marginBottom: "2px" }} /> Home
+                </Nav.Link>
+              </Nav.Item>
 
-            <text
-              x="50"
-              y="130"
-              fontFamily="Arial"
-              fontSize="100"
-              fill="#CD5FF8"
-              fontWeight="bold"
-            >
-              S
-            </text>
-            <text
-              x="110"
-              y="130"
-              fontFamily="Arial"
-              fontSize="100"
-              fill="#CD5FF8"
-              fontWeight="bold"
-            >
-              P
-            </text>
-          </svg>
-        </Navbar.Brand>
-        <Navbar.Toggle
-          aria-controls="responsive-navbar-nav"
-          onClick={() => {
-            updateExpanded(expand ? false : "expanded");
-          }}
-        >
-          <span></span>
-          <span></span>
-          <span></span>
-        </Navbar.Toggle>
-        <Navbar.Collapse id="responsive-navbar-nav">
-          <Nav className="ms-auto" defaultActiveKey="#home">
-            <Nav.Item>
-              <Nav.Link as={Link} to="/" onClick={() => updateExpanded(false)}>
-                <AiOutlineHome style={{ marginBottom: "2px" }} /> Home
-              </Nav.Link>
-            </Nav.Item>
+              <Nav.Item>
+                <Nav.Link
+                  as={Link}
+                  to="/about"
+                  onClick={() => updateExpanded(false)}
+                >
+                  <AiOutlineUser style={{ marginBottom: "2px" }} /> About
+                </Nav.Link>
+              </Nav.Item>
 
-            <Nav.Item>
-              <Nav.Link
-                as={Link}
-                to="/about"
-                onClick={() => updateExpanded(false)}
-              >
-                <AiOutlineUser style={{ marginBottom: "2px" }} /> About
-              </Nav.Link>
-            </Nav.Item>
+              <Nav.Item>
+                <Nav.Link
+                  as={Link}
+                  to="/project"
+                  onClick={() => updateExpanded(false)}
+                >
+                  <AiOutlineFundProjectionScreen
+                    style={{ marginBottom: "2px" }}
+                  />{" "}
+                  Projects
+                </Nav.Link>
+              </Nav.Item>
 
-            <Nav.Item>
-              <Nav.Link
-                as={Link}
-                to="/project"
-                onClick={() => updateExpanded(false)}
-              >
-                <AiOutlineFundProjectionScreen
-                  style={{ marginBottom: "2px" }}
-                />{" "}
-                Projects
-              </Nav.Link>
-            </Nav.Item>
+              <Nav.Item>
+                <Nav.Link
+                  as={Link}
+                  to="/resume"
+                  onClick={() => updateExpanded(false)}
+                >
+                  <CgFileDocument style={{ marginBottom: "2px" }} /> Resume
+                </Nav.Link>
+              </Nav.Item>
 
-            <Nav.Item>
-              <Nav.Link
-                as={Link}
-                to="/resume"
-                onClick={() => updateExpanded(false)}
-              >
-                <CgFileDocument style={{ marginBottom: "2px" }} /> Resume
-              </Nav.Link>
-            </Nav.Item>
+              <Nav.Item>
+                <Nav.Link
+                  as={Link}
+                  to="/contact"
 
-            <Nav.Item>
-              <Nav.Link
-                as={Link}
-                to="/contact"
+                >
+                  <AiOutlineContacts style={{ marginBottom: "2px" }} /> Contact
+                </Nav.Link>
+              </Nav.Item>
 
-              >
-                <AiOutlineContacts style={{ marginBottom: "2px" }} /> Contact
-              </Nav.Link>
-            </Nav.Item>
-
-            <Nav.Item className="fork-btn">
-              <Button
-                href="https://github.com/iamtheshru"
-                target="_blank"
-                className="fork-btn-inner"
-              >
-                <CgGitFork style={{ fontSize: "1.2em" }} />{" "}
-                <AiFillStar style={{ fontSize: "1.1em" }} />
-              </Button>
-            </Nav.Item>
-          </Nav>
-        </Navbar.Collapse>
-      </Container>
-    </Navbar>
+              <Nav.Item className="fork-btn">
+                <Button
+                  href="https://github.com/iamtheshru"
+                  target="_blank"
+                  className="fork-btn-inner"
+                >
+                  <CgGitFork style={{ fontSize: "1.2em" }} />{" "}
+                  <AiFillStar style={{ fontSize: "1.1em" }} />
+                </Button>
+              </Nav.Item>
+            </Nav>
+          </Navbar.Collapse>
+        </Container>
+      </Navbar>
+    </>
   );
 }
 

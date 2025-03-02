@@ -5,6 +5,7 @@ import Container from "react-bootstrap/Container";
 import Button from "react-bootstrap/Button";
 import { Link } from "react-router-dom";
 import { CgGitFork } from "react-icons/cg";
+import profilelogo from "../../Assets/shraddhaPatel.jpeg";
 import {
   AiFillStar,
   AiOutlineHome,
@@ -34,12 +35,13 @@ function NavBar() {
   return (
     <>
       <Helmet>
-        <meta property="og:title" content="Your Page Title" />
-        <meta property="og:description" content="This is a description of your page." />
-        <meta property="og:image" content="https://example.com/your-image.jpg" />
-        <meta property="og:url" content="https://example.com/your-page" />
+        <meta property="og:title" content="Shraddha Patel Portfolio - Gandhinagar" />
+        <meta property="og:description" content="Welcome to Shraddha Patel's professional portfolio. Explore her skills, projects, and experience in Gandhinagar." />
+        <meta property="og:image" content={profilelogo} />
+        <meta property="og:url" content="https://shraddhapatel.com/portfolio" />
         <meta property="og:type" content="website" />
       </Helmet>
+
 
       <Navbar
         expanded={expand}

@@ -53,8 +53,8 @@ function Home2() {
             </p>
           </Col>
           <Col md={4} className="myAvtar">
-            <div className=" w-75 ms-auto">
-              <Tilt>
+          <div className="w-full md:w-[75%] md:ms-auto">
+          <Tilt>
                 <img src={myImg} className="img-fluid" alt="avatar" />
               </Tilt>
             </div>

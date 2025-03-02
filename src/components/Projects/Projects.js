@@ -28,11 +28,14 @@ function Projects() {
         <p style={{ color: "white" }}>
           Here are a few projects I've worked on recently.
         </p>
-        <Button variant="primary" onClick={() => handleBtn("all")} style={{ marginLeft: "10px" }}>All</Button>
-        <Button variant="primary" onClick={() => handleBtn("react")} style={{ marginLeft: "10px" }}>React JS</Button>
-        <Button variant="primary" onClick={() => handleBtn("js")} style={{ marginLeft: "10px" }}>JavaScript</Button>
-        <Button variant="primary" onClick={() => handleBtn("wd")} style={{ marginLeft: "10px" }}>Web Desing</Button>
+        <div className="d-flex flex-wrap gap-3" style={{justifyContent:'center'}}>
 
+        <Button variant="primary" onClick={() => handleBtn("all")} >All</Button>
+        <Button variant="primary" onClick={() => handleBtn("react")} >React JS</Button>
+        <Button variant="primary" onClick={() => handleBtn("js")} >JavaScript</Button>
+        <Button variant="primary" onClick={() => handleBtn("wd")} >Web Desing</Button>
+
+        </div>
         <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
           {(activeBtn === "all" || activeBtn === "react") && (
             <>

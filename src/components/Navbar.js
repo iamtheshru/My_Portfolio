@@ -40,7 +40,7 @@ function NavBar() {
       <Container>
         <Navbar.Brand href="/" className="d-flex">
           <svg
-            width="200"
+            width="60"
             height="60"
             viewBox="0 0 200 200"
             xmlns="http://www.w3.org/2000/svg"

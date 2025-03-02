@@ -56,7 +56,7 @@ const ContactSkills = () => {
     return (
         <Container fluid className="about-section ">
             <Particle />
-            <section className="down-box w-50 mx-auto" id="contact">
+            <section className="down-box mx-auto" id="contact">
                 <div className="contactSkills">
                     {/* Contact Form */}
                     <div className="contact-info">
@@ -83,7 +83,7 @@ const ContactSkills = () => {
                                     />
                                 </div>
                                 {/* Last Name */}
-                                <div className="col-md-6">
+                                <div className="col-md-6 ">
                                     <label htmlFor="lastName" className="form-label">
                                         Last Name
                                     </label>
@@ -101,7 +101,7 @@ const ContactSkills = () => {
                             </div>
 
                             {/* Email */}
-                            <div className="mb-3">
+                            <div>
                                 <label htmlFor="email" className="form-label">
                                     Email
                                 </label>
@@ -118,7 +118,7 @@ const ContactSkills = () => {
                             </div>
 
                             {/* Subject */}
-                            <div className="mb-3">
+                            <div >
                                 <label htmlFor="subject" className="form-label">
                                     Subject
                                 </label>

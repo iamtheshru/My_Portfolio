@@ -28,6 +28,12 @@
   color: #61dafb;
 }
 
+#contact{
+  width: 50%;
+}
+.contact-info .form-label{
+  margin-top: 15px;
+  }
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
@@ -62,4 +68,53 @@
   .width-full {
     width: 100% !important;
   }
+}
+
+@media (max-width:767px) {
+  .home-content {
+    padding: 2rem 0 0rem !important;
+    color: whitesmoke;
+    text-align: left;
+}
+.home-about-description {
+  color: white !important;
+  padding-top: 0px !important;
+  padding-bottom: 20px !important;
+  text-align: center;
+}
+.home-about-section {
+  position: relative;
+  padding-bottom: 50px !important;
+  padding-top: 50px !important;
+}
+.blockquote {
+  margin-bottom: 1rem;
+  font-size: 16px;
+}
+.styles_footer__ltlVl {
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+}
+.styles_legendColors__FYXRi {
+  margin-left: 0;
+  margin-top: 10px;
+  display: flex;
+}
+.project-card {
+  padding-top: 50px !important;
+  padding-bottom: 50px !important;
+  padding-left: 10px !important;
+  padding-right: 10px !important;
+  height: auto !important;
+}
+#contact{
+  width: 100%;
+}
+.contact-info{
+  text-align: left;
+}
+/* .contact-info .form-label{
+margin-top: 15px;
+} */
 }

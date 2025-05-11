@@ -9,6 +9,9 @@ import Game from "../../Assets/Projects/game.png";
 import Ems from "../../Assets/Projects/react.png"
 import happymart from "../../Assets/Projects/happymart.png"
 import brunchfood from "../../Assets/Projects/brunch-food.png"
+import pokemon from "../../Assets/Projects/pokemon.png"
+// import pokemonVideo from '../../Assets/Projects/pokemon_video.mp4';
+
 function Projects() {
   const [activeBtn, setActiveBtn] = useState("all");
 
@@ -28,12 +31,12 @@ function Projects() {
         <p style={{ color: "white" }}>
           Here are a few projects I've worked on recently.
         </p>
-        <div className="d-flex flex-wrap gap-3" style={{justifyContent:'center'}}>
+        <div className="d-flex flex-wrap gap-3" style={{ justifyContent: 'center' }}>
 
-        <Button variant="primary" onClick={() => handleBtn("all")} >All</Button>
-        <Button variant="primary" onClick={() => handleBtn("react")} >React JS</Button>
-        <Button variant="primary" onClick={() => handleBtn("js")} >JavaScript</Button>
-        <Button variant="primary" onClick={() => handleBtn("wd")} >Web Desing</Button>
+          <Button variant="primary" onClick={() => handleBtn("all")} >All</Button>
+          <Button variant="primary" onClick={() => handleBtn("react")} >React JS</Button>
+          <Button variant="primary" onClick={() => handleBtn("js")} >JavaScript</Button>
+          <Button variant="primary" onClick={() => handleBtn("wd")} >Web Desing</Button>
 
         </div>
         <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
@@ -57,6 +60,17 @@ function Projects() {
                   description=""
                   ghLink="https://github.com/iamtheshru/Ticket_Management"
                   demoLink="https://ticket-management-amber.vercel.app/"
+                />
+              </Col>
+              <Col md={4} className="project-card">
+                <ProjectCard
+                  imgPath={pokemon}
+                  isBlog={false}
+                  title="Pokemon"
+                  description=""
+                  ghLink="https://github.com/iamtheshru/Pokemon"
+                  demoLink="/video/pokemon_video.mp4"
+                // hoverVideo={true} // New prop added
                 />
               </Col>
             </>

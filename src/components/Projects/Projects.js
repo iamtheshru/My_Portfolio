@@ -9,7 +9,7 @@ import Game from "../../Assets/Projects/game.png";
 import Ems from "../../Assets/Projects/react.png"
 import happymart from "../../Assets/Projects/happymart.png"
 import brunchfood from "../../Assets/Projects/brunch-food.png"
-import pokemon from "../../Assets/Projects/pokemon.png"
+// import pokemon from "../../Assets/Projects/pokemon.png"
 // import pokemonVideo from '../../Assets/Projects/pokemon_video.mp4';
 
 function Projects() {
@@ -62,7 +62,7 @@ function Projects() {
                   demoLink="https://ticket-management-amber.vercel.app/"
                 />
               </Col>
-              <Col md={4} className="project-card">
+              {/* <Col md={4} className="project-card">
                 <ProjectCard
                   imgPath={pokemon}
                   isBlog={false}
@@ -72,7 +72,7 @@ function Projects() {
                   demoLink="/video/pokemon_video.mp4"
                 // hoverVideo={true} // New prop added
                 />
-              </Col>
+              </Col> */}
             </>
           )
           }
